@@ -1,12 +1,13 @@
 import React from "react";
-import "./Profile.css";
+import PropTypes from "prop-types";
+import css from "./Profile.module.css";
 
 
 
 const Profile = ({username, usertag, userlocation, useravatar,userStats}) => {
     return (
-        <div className="profile">
-            <div className="description">
+        <div className={css.profile}>
+            <div className={css.description}>
                 <img
                     src={useravatar}
                     alt="User avatar"
@@ -17,23 +18,34 @@ const Profile = ({username, usertag, userlocation, useravatar,userStats}) => {
                 <p className="location">{userlocation}</p>
             </div>
 
-            <ul className="stats">
+            <ul className={css.stats}>
                 <li>
-                    <span className="label">Followers</span>
-                    <span className="quantity">{userStats.followers}</span>
+                    <span className={css.label}>Followers</span>
+                    <span className={css.quantity}>{userStats.followers}</span>
                 </li>
                 <li>
-                    <span className="label">Views</span>
-                    <span className="quantity">{userStats.views}</span>
+                    <span className={css.label}>Views</span>
+                    <span className={css.quantity}>{userStats.views}</span>
                 </li>
                 <li>
-                    <span className="label">Likes</span>
-                    <span className="quantity">{userStats.likes}</span>
+                    <span className={css.label}>Likes</span>
+                    <span className={css.quantity}>{userStats.likes}</span>
                 </li>
             </ul>
         </div>
     )
     
 };
+
+
+Profile.propType = {
+    username: PropTypes.string,
+    usertag: PropTypes.string,
+    userlocation: PropTypes.string,
+    useravatar: PropTypes.string,
+    userStats: PropTypes.number
+
+}
+
 
 export default Profile;
