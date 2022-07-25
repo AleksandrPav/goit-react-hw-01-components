@@ -3,6 +3,8 @@ import userProfile from './Profile/user.json';
 import statistics from './Statistics/data.json';
 import StatisticsList from './Statistics/StatisticsList';
 import StatisticsSection from './Statistics/StatisticsSection';
+import FriendsList from './FriendList/FriendsList';
+import friends from './FriendList/friend.json';
 
 export const App = () => {
   
@@ -10,13 +12,14 @@ export const App = () => {
     
     <div
       style={{
-        height: '100vh',
+        // height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+      
       }}
     >
       <Profile
@@ -29,14 +32,9 @@ export const App = () => {
       <StatisticsSection title="Upload stats">
         <StatisticsList  stats={statistics} />
       </StatisticsSection>
-      
 
-
-      
-   
-      
-      
-
+      <FriendsList friends={friends} />
+        
     </div>
     
   );

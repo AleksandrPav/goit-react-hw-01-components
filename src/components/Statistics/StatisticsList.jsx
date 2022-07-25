@@ -1,17 +1,9 @@
 import Statistics from "./Statistics";
 import css from "./Statistics.module.css";
-
-
-
 import PropTypes from "prop-types";
 
 
-
-
 function StatisticsList({ stats }) {
-   
-
-    
 
     return (
     <ul className={css.stat_list}>

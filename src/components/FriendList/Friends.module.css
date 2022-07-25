@@ -1,0 +1,25 @@
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.item img{
+    margin-right: 25px;
+}
+.status{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 25px;
+}
+
+.status_online{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 25px;
+}
